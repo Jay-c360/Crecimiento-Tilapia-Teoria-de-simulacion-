@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculo de biomasa de tilapia en el tiempo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="parent">
+     
+        <div class="overlay">
+            <h2>Ingreso de datos</h2>
+            <form id="myForm">
+                <div class="mb-3">
+                  <label for="amount" class="form-label" >Amount of fish</label>
+                  <input type="number" class="form-control" id="amount" name="amount" required>
+                </div>
+                <div class="mb-3">
+                  <label for="days" class="form-label">Number of days</label>
+                  <input type="number" class="form-control" id="days" name="days" required>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="calculate()">Submit</button>
+              </form>
+        </div>
+      
+        <div class="left">
+            <div class="card-body" id="resultados">
+                <h5 class="card-title">Resultados finales</h5>
+                <p class="card-text">Biomass: 100 g</p>
+                <p class="card-text">Total food given: 50 g</p>
+                <p class="card-text">FCR: 2</p>
+              </div>
+        </div>
+    
+    </div>
+    
+    <div class="right">
+      <h1>Grafica de cambios</h1>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Line Graph</h5>
+            <div class="btn-group " role="group" aria-label="Line Graph Buttons">
+              <button type="button" class="btn btn-primary" id="graph1">Graph 1</button>
+              <button type="button" class="btn btn-primary" id="graph2">Graph 2</button>
+              <button type="button" class="btn btn-primary" id="graph3">Graph 3</button>
+              <button type="button" class="btn btn-primary" id="graph4">Graph 4</button>
+            </div>
+            <div class="graph-container">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+  <script src="pruebas.js"></script>
+</body>
+</html>
